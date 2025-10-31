@@ -1,7 +1,7 @@
 <?php
 // Definišite vremenski interval kada je M3U lista dostupna
 $start_time = strtotime("2025-10-31 10:00:00"); // Početak
-$end_time = strtotime("2025-10-31 23:30:00");  // Kraj
+$end_time = strtotime("2025-10-31 23:36:00");  // Kraj
 
 // Trenutno vreme
 $current_time = time();
