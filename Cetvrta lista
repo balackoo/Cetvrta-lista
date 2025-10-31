@@ -1,0 +1,20 @@
+<?php
+// Definišite vremenski interval kada je M3U lista dostupna
+$start_time = strtotime("2025-10-31 10:00:00"); // Početak
+$end_time = strtotime("2025-10-31 23:30:00");  // Kraj
+
+// Trenutno vreme
+$current_time = time();
+
+// Proverite da li je trenutno vreme unutar dozvoljenog vremenskog intervala
+if ($current_time >= $start_time && $current_time <= $end_time) {
+    // Ako je vremenski okvir validan, omogućite preuzimanje M3U liste
+    $m3u_url = "http://tinyurl.com/iptvsrb/rade6.m3u";
+    
+    echo "M3U lista je dostupna za preuzimanje! <br>";
+    echo "<a href='$m3u_url' download>Preuzmite IPTV M3U listu</a>";
+} else {
+    // Ako je van vremenskog okvira, prikažite poruku o grešci
+    echo "Preuzimanje M3U liste nije dozvoljeno jer je izvan dozvoljenog vremenskog okvira.";
+}
+?>
